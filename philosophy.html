@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philosophy | Masaka Chacha Knowledge Hub</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.8;
+            background: #f4f6f8;
+            color: #222;
+        }
+        header, footer {
+            background: #123456;
+            color: white;
+            text-align: center;
+            padding: 22px 15px;
+        }
+        nav {
+            background: #087e8b;
+            padding: 12px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 6px 10px;
+            display: inline-block;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        button {
+            background: #087e8b;
+            color: white;
+            padding: 10px 18px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        main {
+            max-width: 850px;
+            margin: 25px auto;
+            padding: 25px;
+            background: white;
+            border-radius: 10px;
+        }
+        h2 { color: #123456; }
+        .back { color: #087e8b; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MASAKA CHACHA KNOWLEDGE HUB</h1>
+    <p data-en="Explore Ideas. Question Assumptions. Seek Truth."
+       data-sw="Chunguza Mawazo. Hoji Dhana. Tafuta Ukweli.">
+       Explore Ideas. Question Assumptions. Seek Truth.
+    </p>
+    <button onclick="changeLanguage('en')">English</button>
+    <button onclick="changeLanguage('sw')">Kiswahili</button>
+</header>
+
+<nav>
+    <a href="index.html"
+       data-en="Philosophy"
+       data-sw="Falsafa">Philosophy</a>
+</nav>
+
+<main>
+    <a class="back" href="index.html"
+       data-en="← Back to Home" data-sw="← Rudi Mwanzo">← Back to Home</a>
+<img src="images/philosophy.jpg"
+     alt="Philosophy and critical thinking"
+     class="article-image">
+
+
+    <h2 data-en="What Is Philosophy?"
+        data-sw="Falsafa Ni Nini?">What Is Philosophy?</h2>
+
+    <p data-en="Philosophy is the systematic study of fundamental questions about reality, knowledge, morality, reasoning and human existence. It encourages people to examine ideas carefully rather than accept every claim without questioning it."
+       data-sw="Falsafa ni uchunguzi wa kimfumo wa maswali ya msingi kuhusu uhalisia, maarifa, maadili, mantiki na uwepo wa binadamu. Huwahimiza watu kuchunguza mawazo kwa makini badala ya kukubali kila dai bila kuhoji.">
+       Philosophy is the systematic study of fundamental questions about reality, knowledge, morality, reasoning and human existence. It encourages people to examine ideas carefully rather than accept every claim without questioning it.
+    </p>
+
+    <h2 data-en="Major Branches of Philosophy"
+        data-sw="Matawi Makuu ya Falsafa">Major Branches of Philosophy</h2>
+
+    <p data-en="Metaphysics studies reality and existence. Epistemology examines knowledge and how we know what we know. Ethics studies right and wrong. Logic examines the principles of sound reasoning."
+       data-sw="Metafizikia huchunguza uhalisia na uwepo. Epistemolojia huchunguza maarifa na jinsi tunavyojua tunachodai kujua. Maadili huchunguza mema na mabaya. Mantiki huchunguza kanuni za hoja sahihi.">
+       Metaphysics studies reality and existence. Epistemology examines knowledge and how we know what we know. Ethics studies right and wrong. Logic examines the principles of sound reasoning.
+    </p>
+
+    <h2 data-en="Why Philosophy Matters"
+        data-sw="Kwa Nini Falsafa Ni Muhimu">Why Philosophy Matters</h2>
+
+    <p data-en="Philosophy develops critical thinking, careful argumentation and intellectual humility. It helps us recognise weak arguments, investigate assumptions and make more thoughtful decisions."
+       data-sw="Falsafa hukuza fikra tunduizi, ujenzi wa hoja makini na unyenyekevu wa kiakili. Hutusaidia kutambua hoja dhaifu, kuchunguza dhana na kufanya maamuzi yenye tafakuri zaidi.">
+       Philosophy develops critical thinking, careful argumentation and intellectual humility. It helps us recognise weak arguments, investigate assumptions and make more thoughtful decisions.
+    </p>
+</main>
+
+<footer>
+    <p>© 2026 Masaka Chacha Knowledge Hub</p>
+</footer>
+
+<script>
+    function changeLanguage(language) {
+        document.querySelectorAll("[data-en]").forEach(function(element) {
+            element.textContent = element.getAttribute("data-" + language);
+        });
+        document.documentElement.lang = language;
+    }
+</script>
+
+</body>
+</html>

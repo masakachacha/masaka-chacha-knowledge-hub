@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Religion | Masaka Chacha Knowledge Hub</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.8;
+            background: #f4f6f8;
+            color: #222;
+        }
+
+        header, footer {
+            background: #123456;
+            color: white;
+            text-align: center;
+            padding: 22px 15px;
+        }
+
+        nav {
+            background: #087e8b;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        button {
+            background: #087e8b;
+            color: white;
+            padding: 10px 18px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        main {
+            max-width: 850px;
+            margin: 25px auto;
+            padding: 25px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #123456;
+        }
+
+        .back {
+            color: #087e8b;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>MASAKA CHACHA KNOWLEDGE HUB</h1>
+
+    <p data-en="Religion, Belief and the Search for Meaning"
+       data-sw="Dini, Imani na Tafuta Maana ya Maisha">
+       Religion, Belief and the Search for Meaning
+    </p>
+
+    <button onclick="changeLanguage('en')">English</button>
+    <button onclick="changeLanguage('sw')">Kiswahili</button>
+</header>
+
+<nav>
+    <a href="index.html"
+       data-en="Religion"
+       data-sw="Dini">Religion</a>
+</nav>
+
+<main>
+
+    <a class="back" href="index.html"
+       data-en="← Back to Home"
+       data-sw="← Rudi Mwanzo">← Back to Home</a>
+<img src="images/religion.jpg"
+     alt="Religion, faith and spirituality"
+     class="article-image">
+
+    <h2 data-en="What Is Religion?"
+        data-sw="Dini Ni Nini?">What Is Religion?</h2>
+
+    <p data-en="Religion refers to systems of beliefs, practices, values and traditions through which people understand the sacred, spiritual realities and questions about human existence. Religions differ in their teachings, scriptures, rituals and views of the world."
+       data-sw="Dini inahusu mifumo ya imani, matendo, maadili na desturi ambazo watu hutumia kuelewa mambo matakatifu, uhalisia wa kiroho na maswali kuhusu uwepo wa binadamu. Dini hutofautiana katika mafundisho, maandiko, ibada na mitazamo yao kuhusu ulimwengu.">
+       Religion refers to systems of beliefs, practices, values and traditions through which people understand the sacred, spiritual realities and questions about human existence. Religions differ in their teachings, scriptures, rituals and views of the world.
+    </p>
+
+    <h2 data-en="The Study of Religion"
+        data-sw="Uchunguzi wa Dini">The Study of Religion</h2>
+
+    <p data-en="The academic study of religion examines religious beliefs, history, texts, rituals and their influence on individuals and societies. Researchers may use history, anthropology, sociology, philosophy and textual analysis to understand religious traditions."
+       data-sw="Uchunguzi wa kitaaluma wa dini huchunguza imani, historia, maandiko, ibada na athari zake kwa watu binafsi na jamii. Watafiti wanaweza kutumia historia, anthropolojia, sosholojia, falsafa na uchambuzi wa maandiko kuelewa desturi za kidini.">
+       The academic study of religion examines religious beliefs, history, texts, rituals and their influence on individuals and societies. Researchers may use history, anthropology, sociology, philosophy and textual analysis to understand religious traditions.
+    </p>
+
+    <h2 data-en="Religion and Critical Thinking"
+        data-sw="Dini na Fikra Tunduizi">Religion and Critical Thinking</h2>
+
+    <p data-en="Critical thinking encourages us to examine religious claims carefully, understand their historical and cultural contexts, distinguish evidence from interpretation and represent other people's beliefs fairly. Respectful inquiry does not require agreement with every belief."
+       data-sw="Fikra tunduizi hutuhimiza kuchunguza madai ya kidini kwa makini, kuelewa mazingira yake ya kihistoria na kitamaduni, kutofautisha ushahidi na tafsiri, na kueleza imani za wengine kwa haki. Uchunguzi wenye heshima haulazimishi mtu kukubaliana na kila imani.">
+       Critical thinking encourages us to examine religious claims carefully, understand their historical and cultural contexts, distinguish evidence from interpretation and represent other people's beliefs fairly. Respectful inquiry does not require agreement with every belief.
+    </p>
+
+    <h2 data-en="Religion, Ethics and Society"
+        data-sw="Dini, Maadili na Jamii">Religion, Ethics and Society</h2>
+
+    <p data-en="Religious traditions have influenced moral teachings, art, education, laws and community life in many societies. Their effects vary across historical periods and cultures, making careful study important for understanding humanity."
+       data-sw="Desturi za kidini zimeathiri mafundisho ya maadili, sanaa, elimu, sheria na maisha ya jamii katika tamaduni nyingi. Athari zake hutofautiana kulingana na vipindi vya historia na tamaduni, hivyo uchunguzi makini ni muhimu katika kuelewa ubinadamu.">
+       Religious traditions have influenced moral teachings, art, education, laws and community life in many societies. Their effects vary across historical periods and cultures, making careful study important for understanding humanity.
+    </p>
+
+</main>
+
+<footer>
+    <p>© 2026 Masaka Chacha Knowledge Hub</p>
+</footer>
+
+<script>
+    function changeLanguage(language) {
+        document.querySelectorAll("[data-en]").forEach(function(element) {
+            element.textContent =
+                element.getAttribute("data-" + language);
+        });
+
+        document.documentElement.lang = language;
+    }
+</script>
+
+</body>
+</html>
