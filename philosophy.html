@@ -3,115 +3,410 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Philosophy | Masaka Chacha Knowledge Hub</title>
+
+    <meta name="description"
+          content="Explore philosophy, knowledge, truth, ethics, logic and the ideas of great thinkers at Masaka Chacha Knowledge Hub.">
+
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             line-height: 1.8;
+            color: #263238;
             background: #f4f6f8;
-            color: #222;
         }
-        header, footer {
+
+        header {
             background: #123456;
             color: white;
+            padding: 28px 16px;
             text-align: center;
-            padding: 22px 15px;
         }
+
+        header h1 {
+            margin: 0 0 10px;
+        }
+
         nav {
             background: #087e8b;
             padding: 12px;
             text-align: center;
         }
+
         nav a {
             color: white;
-            margin: 6px 10px;
-            display: inline-block;
             text-decoration: none;
+            margin: 0 12px;
             font-weight: bold;
         }
-        button {
-            background: #087e8b;
-            color: white;
-            padding: 10px 18px;
-            margin: 5px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+
         main {
-            max-width: 850px;
+            max-width: 950px;
             margin: 25px auto;
             padding: 25px;
             background: white;
             border-radius: 10px;
         }
-        h2 { color: #123456; }
-        .back { color: #087e8b; font-weight: bold; }
+
+        h2, h3 {
+            color: #123456;
+            line-height: 1.4;
+        }
+
+        .intro {
+            font-size: 1.1rem;
+        }
+
+        .note {
+            background: #eef6f7;
+            border-left: 4px solid #087e8b;
+            padding: 14px;
+            margin: 20px 0;
+        }
+
+        .language-buttons {
+            text-align: center;
+            margin: 20px;
+        }
+
+        button {
+            background: #087e8b;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            margin: 4px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #065d67;
+        }
+
+        footer {
+            background: #123456;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                margin: 12px;
+                padding: 18px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
 <header>
-    <h1>MASAKA CHACHA KNOWLEDGE HUB</h1>
-    <p data-en="Explore Ideas. Question Assumptions. Seek Truth."
-       data-sw="Chunguza Mawazo. Hoji Dhana. Tafuta Ukweli.">
-       Explore Ideas. Question Assumptions. Seek Truth.
+    <h1 data-en="Philosophy: The Love of Wisdom"
+        data-sw="Falsafa: Upendo wa Hekima">
+        Philosophy: The Love of Wisdom
+    </h1>
+
+    <p data-en="Think deeply. Question carefully. Seek understanding."
+       data-sw="Fikiri kwa kina. Hoji kwa makini. Tafuta ufahamu.">
+       Think deeply. Question carefully. Seek understanding.
     </p>
-    <button onclick="changeLanguage('en')">English</button>
-    <button onclick="changeLanguage('sw')">Kiswahili</button>
 </header>
 
 <nav>
     <a href="index.html"
-       data-en="Philosophy"
-       data-sw="Falsafa">Philosophy</a>
+       data-en="Home" data-sw="Mwanzo">Home</a>
+
+    <a href="#introduction"
+       data-en="Introduction" data-sw="Utangulizi">Introduction</a>
+
+    <a href="#branches"
+       data-en="Branches" data-sw="Matawi">Branches</a>
+
+    <a href="#thinkers"
+       data-en="Thinkers" data-sw="Wanafalsafa">Thinkers</a>
 </nav>
 
+<div class="language-buttons">
+    <button onclick="setLanguage('en')">English</button>
+    <button onclick="setLanguage('sw')">Kiswahili</button>
+</div>
+
 <main>
-    <a class="back" href="index.html"
-       data-en="← Back to Home" data-sw="← Rudi Mwanzo">← Back to Home</a>
-<img src="images/philosophy.jpg"
-     alt="Philosophy and critical thinking"
-     class="article-image">
 
+<section id="introduction">
+    <h2 data-en="1. What Is Philosophy?"
+        data-sw="1. Falsafa Ni Nini?">1. What Is Philosophy?</h2>
 
-    <h2 data-en="What Is Philosophy?"
-        data-sw="Falsafa Ni Nini?">What Is Philosophy?</h2>
-
-    <p data-en="Philosophy is the systematic study of fundamental questions about reality, knowledge, morality, reasoning and human existence. It encourages people to examine ideas carefully rather than accept every claim without questioning it."
-       data-sw="Falsafa ni uchunguzi wa kimfumo wa maswali ya msingi kuhusu uhalisia, maarifa, maadili, mantiki na uwepo wa binadamu. Huwahimiza watu kuchunguza mawazo kwa makini badala ya kukubali kila dai bila kuhoji.">
-       Philosophy is the systematic study of fundamental questions about reality, knowledge, morality, reasoning and human existence. It encourages people to examine ideas carefully rather than accept every claim without questioning it.
+    <p class="intro"
+       data-en="Philosophy is the systematic study of fundamental questions about reality, knowledge, truth, morality, reasoning and human existence. It encourages people to examine beliefs, question assumptions, evaluate arguments and seek rational explanations."
+       data-sw="Falsafa ni uchunguzi wa kimfumo wa maswali ya msingi kuhusu uhalisia, maarifa, ukweli, maadili, hoja na uwepo wa binadamu. Huwahimiza watu kuchunguza imani, kuhoji dhana zilizokubaliwa, kupima hoja na kutafuta maelezo yenye mantiki.">
+       Philosophy is the systematic study of fundamental questions about reality, knowledge, truth, morality, reasoning and human existence. It encourages people to examine beliefs, question assumptions, evaluate arguments and seek rational explanations.
     </p>
 
-    <h2 data-en="Major Branches of Philosophy"
-        data-sw="Matawi Makuu ya Falsafa">Major Branches of Philosophy</h2>
-
-    <p data-en="Metaphysics studies reality and existence. Epistemology examines knowledge and how we know what we know. Ethics studies right and wrong. Logic examines the principles of sound reasoning."
-       data-sw="Metafizikia huchunguza uhalisia na uwepo. Epistemolojia huchunguza maarifa na jinsi tunavyojua tunachodai kujua. Maadili huchunguza mema na mabaya. Mantiki huchunguza kanuni za hoja sahihi.">
-       Metaphysics studies reality and existence. Epistemology examines knowledge and how we know what we know. Ethics studies right and wrong. Logic examines the principles of sound reasoning.
+    <p data-en="The word philosophy comes from the Greek words philos, associated with love or friendship, and sophia, meaning wisdom. Philosophy is therefore commonly described as the love of wisdom."
+       data-sw="Neno philosophy linatokana na maneno ya Kigiriki philos, linalohusishwa na upendo au urafiki, na sophia, linalomaanisha hekima. Kwa hiyo, falsafa hufafanuliwa kwa kawaida kama upendo wa hekima.">
+       The word philosophy comes from the Greek words philos, associated with love or friendship, and sophia, meaning wisdom. Philosophy is therefore commonly described as the love of wisdom.
     </p>
 
-    <h2 data-en="Why Philosophy Matters"
-        data-sw="Kwa Nini Falsafa Ni Muhimu">Why Philosophy Matters</h2>
-
-    <p data-en="Philosophy develops critical thinking, careful argumentation and intellectual humility. It helps us recognise weak arguments, investigate assumptions and make more thoughtful decisions."
-       data-sw="Falsafa hukuza fikra tunduizi, ujenzi wa hoja makini na unyenyekevu wa kiakili. Hutusaidia kutambua hoja dhaifu, kuchunguza dhana na kufanya maamuzi yenye tafakuri zaidi.">
-       Philosophy develops critical thinking, careful argumentation and intellectual humility. It helps us recognise weak arguments, investigate assumptions and make more thoughtful decisions.
+    <p data-en="Philosophy is not simply the collection of opinions. Philosophers examine reasons, assess evidence, clarify concepts and consider objections before accepting a conclusion."
+       data-sw="Falsafa si mkusanyiko wa maoni tu. Wanafalsafa huchunguza sababu, hupima ushahidi, hufafanua dhana na kuzingatia hoja zinazopinga kabla ya kukubali hitimisho.">
+       Philosophy is not simply the collection of opinions. Philosophers examine reasons, assess evidence, clarify concepts and consider objections before accepting a conclusion.
     </p>
+
+    <div class="note"
+         data-en="Example: If someone says that a claim must be true because many people believe it, a philosophical thinker asks whether popularity is sufficient evidence of truth."
+         data-sw="Mfano: Mtu akisema dai fulani lazima liwe kweli kwa sababu watu wengi wanaliamini, mwanafalsafa huuliza kama umaarufu wa imani hiyo ni ushahidi wa kutosha wa ukweli.">
+        Example: If someone says that a claim must be true because many people believe it, a philosophical thinker asks whether popularity is sufficient evidence of truth.
+    </div>
+</section>
+
+<section id="importance">
+    <h2 data-en="2. Why Is Philosophy Important?"
+        data-sw="2. Kwa Nini Falsafa Ni Muhimu?">
+        2. Why Is Philosophy Important?
+    </h2>
+
+    <p data-en="Philosophy develops critical thinking, intellectual independence, careful reasoning and the ability to evaluate competing explanations. It helps people discuss disagreement without automatically assuming that everyone who disagrees is ignorant or dishonest."
+       data-sw="Falsafa huendeleza fikra tunduizi, uhuru wa kiakili, hoja makini na uwezo wa kupima maelezo yanayoshindana. Husaidia watu kujadili tofauti za mawazo bila kudhani moja kwa moja kwamba kila anayepinga ni mjinga au si mwaminifu.">
+       Philosophy develops critical thinking, intellectual independence, careful reasoning and the ability to evaluate competing explanations. It helps people discuss disagreement without automatically assuming that everyone who disagrees is ignorant or dishonest.
+    </p>
+
+    <ul>
+        <li data-en="It helps us distinguish evidence from assumption."
+            data-sw="Hutusaidia kutofautisha ushahidi na dhana.">
+            It helps us distinguish evidence from assumption.
+        </li>
+        <li data-en="It encourages ethical reflection and responsible decisions."
+            data-sw="Huhamasisha tafakuri ya kimaadili na maamuzi yenye uwajibikaji.">
+            It encourages ethical reflection and responsible decisions.
+        </li>
+        <li data-en="It improves argument analysis and problem-solving."
+            data-sw="Huboresha uchambuzi wa hoja na utatuzi wa matatizo.">
+            It improves argument analysis and problem-solving.
+        </li>
+        <li data-en="It helps us examine cultural, political and religious claims fairly."
+            data-sw="Hutusaidia kuchunguza madai ya kitamaduni, kisiasa na kidini kwa haki.">
+            It helps us examine cultural, political and religious claims fairly.
+        </li>
+    </ul>
+</section>
+
+<section id="branches">
+    <h2 data-en="3. The Major Branches of Philosophy"
+        data-sw="3. Matawi Makuu ya Falsafa">
+        3. The Major Branches of Philosophy
+    </h2>
+
+    <h3 data-en="3.1 Metaphysics"
+        data-sw="3.1 Metafizikia">3.1 Metaphysics</h3>
+
+    <p data-en="Metaphysics examines the nature of reality and existence. It asks what exists, what makes something real, and how mind, body, time, identity and causation should be understood."
+       data-sw="Metafizikia huchunguza asili ya uhalisia na uwepo. Huuliza ni nini kilichopo, nini hufanya kitu kiwe halisi, na jinsi akili, mwili, muda, utambulisho na usababishaji vinavyopaswa kueleweka.">
+       Metaphysics examines the nature of reality and existence. It asks what exists, what makes something real, and how mind, body, time, identity and causation should be understood.
+    </p>
+
+    <p data-en="Example: Are human choices genuinely free, or are they completely determined by prior causes? Philosophers disagree about how best to answer this question."
+       data-sw="Mfano: Je, maamuzi ya binadamu yana uhuru wa kweli, au huamuliwa kabisa na sababu zilizotangulia? Wanafalsafa hawakubaliani kuhusu jibu bora la swali hili.">
+       Example: Are human choices genuinely free, or are they completely determined by prior causes? Philosophers disagree about how best to answer this question.
+    </p>
+
+    <h3 data-en="3.2 Epistemology"
+        data-sw="3.2 Epistemolojia">3.2 Epistemology</h3>
+
+    <p data-en="Epistemology is the study of knowledge, belief, justification and evidence. It asks what knowledge is, how knowledge is acquired and what makes a belief justified."
+       data-sw="Epistemolojia ni uchunguzi wa maarifa, imani, uthibitishaji na ushahidi. Huuliza maarifa ni nini, yanapatikanaje na nini hufanya imani iwe na msingi wa kutosha.">
+       Epistemology is the study of knowledge, belief, justification and evidence. It asks what knowledge is, how knowledge is acquired and what makes a belief justified.
+    </p>
+
+    <p data-en="Example: If a friend tells you that a medicine works, should you accept the claim immediately, or examine reliable research and other evidence?"
+       data-sw="Mfano: Rafiki akikuambia dawa fulani inafanya kazi, je, ukubali dai hilo mara moja, au uchunguze tafiti zinazoaminika na ushahidi mwingine?">
+       Example: If a friend tells you that a medicine works, should you accept the claim immediately, or examine reliable research and other evidence?
+    </p>
+
+    <h3 data-en="3.3 Ethics"
+        data-sw="3.3 Maadili">3.3 Ethics</h3>
+
+    <p data-en="Ethics examines right and wrong, good and bad, duties, virtues, rights and responsibilities. Different ethical theories may judge the same action by its consequences, the principles it follows or the character it expresses."
+       data-sw="Maadili huchunguza mema na mabaya, wajibu, fadhila, haki na majukumu. Nadharia mbalimbali za maadili zinaweza kutathmini kitendo kilekile kwa kuzingatia matokeo yake, kanuni zilizofuatwa au tabia inayoonyeshwa.">
+       Ethics examines right and wrong, good and bad, duties, virtues, rights and responsibilities. Different ethical theories may judge the same action by its consequences, the principles it follows or the character it expresses.
+    </p>
+
+    <p data-en="Example: Is it ever acceptable to tell a lie to protect an innocent person? The answer requires examining competing moral principles and the circumstances."
+       data-sw="Mfano: Je, kuna wakati inakubalika kusema uongo ili kumlinda mtu asiye na hatia? Jibu linahitaji kuchunguza kanuni za maadili zinazokinzana na mazingira ya tukio.">
+       Example: Is it ever acceptable to tell a lie to protect an innocent person? The answer requires examining competing moral principles and the circumstances.
+    </p>
+
+    <h3 data-en="3.4 Logic"
+        data-sw="3.4 Mantiki">3.4 Logic</h3>
+
+    <p data-en="Logic studies the principles of good reasoning. It helps us determine whether a conclusion follows from its premises and identify errors such as contradictions and fallacies."
+       data-sw="Mantiki huchunguza kanuni za hoja nzuri. Hutusaidia kutambua kama hitimisho linafuata kutoka kwenye misingi ya hoja na kugundua makosa kama ukinzani na upotoshaji wa hoja.">
+       Logic studies the principles of good reasoning. It helps us determine whether a conclusion follows from its premises and identify errors such as contradictions and fallacies.
+    </p>
+
+    <p data-en="Example: All humans are mortal. Amina is human. Therefore, Amina is mortal. The conclusion follows logically from the two premises."
+       data-sw="Mfano: Binadamu wote hufa. Amina ni binadamu. Kwa hiyo, Amina hufa. Hitimisho linafuata kimantiki kutoka kwenye misingi hiyo miwili.">
+       Example: All humans are mortal. Amina is human. Therefore, Amina is mortal. The conclusion follows logically from the two premises.
+    </p>
+
+    <h3 data-en="3.5 Political Philosophy"
+        data-sw="3.5 Falsafa ya Siasa">3.5 Political Philosophy</h3>
+
+    <p data-en="Political philosophy studies justice, liberty, authority, rights, equality and the responsibilities of governments and citizens."
+       data-sw="Falsafa ya siasa huchunguza haki, uhuru, mamlaka, haki za watu, usawa na majukumu ya serikali na raia.">
+       Political philosophy studies justice, liberty, authority, rights, equality and the responsibilities of governments and citizens.
+    </p>
+
+    <h3 data-en="3.6 Aesthetics"
+        data-sw="3.6 Estetiki">3.6 Aesthetics</h3>
+
+    <p data-en="Aesthetics explores beauty, art, taste and artistic experience. It asks questions such as whether beauty is objective, subjective or influenced by culture."
+       data-sw="Estetiki huchunguza uzuri, sanaa, ladha na uzoefu wa kisanii. Huuliza maswali kama uzuri ni wa kimaumbile unaojitegemea, wa maoni ya mtu, au unaoathiriwa na utamaduni.">
+       Aesthetics explores beauty, art, taste and artistic experience. It asks questions such as whether beauty is objective, subjective or influenced by culture.
+    </p>
+</section>
+
+<section id="thinkers">
+    <h2 data-en="4. Major Philosophers and Their Ideas"
+        data-sw="4. Wanafalsafa Wakuu na Mawazo Yao">
+        4. Major Philosophers and Their Ideas
+    </h2>
+
+    <h3>Socrates (c. 470–399 BCE)</h3>
+    <p data-en="Socrates is associated with questioning, dialogue and examining one's beliefs. The Socratic method uses careful questions to reveal assumptions and test the consistency of ideas."
+       data-sw="Socrates anahusishwa na kuuliza maswali, majadiliano na kuchunguza imani za mtu. Mbinu ya Kisokrate hutumia maswali makini kufichua dhana zilizofichika na kupima uthabiti wa mawazo.">
+       Socrates is associated with questioning, dialogue and examining one's beliefs. The Socratic method uses careful questions to reveal assumptions and test the consistency of ideas.
+    </p>
+
+    <h3>Plato (c. 427–347 BCE)</h3>
+    <p data-en="Plato explored justice, knowledge, education and the nature of reality. His dialogues examine the difference between appearance and deeper understanding."
+       data-sw="Plato alichunguza haki, maarifa, elimu na asili ya uhalisia. Mazungumzo yake yanachunguza tofauti kati ya mwonekano wa mambo na ufahamu wa kina.">
+       Plato explored justice, knowledge, education and the nature of reality. His dialogues examine the difference between appearance and deeper understanding.
+    </p>
+
+    <h3>Aristotle (384–322 BCE)</h3>
+    <p data-en="Aristotle made influential contributions to logic, ethics, politics, biology and the study of nature. His virtue ethics emphasizes developing good character through practice and habit."
+       data-sw="Aristotle alitoa mchango mkubwa katika mantiki, maadili, siasa, biolojia na uchunguzi wa maumbile. Nadharia yake ya maadili ya fadhila inasisitiza kukuza tabia njema kupitia mazoezi na mazoea.">
+       Aristotle made influential contributions to logic, ethics, politics, biology and the study of nature. His virtue ethics emphasizes developing good character through practice and habit.
+    </p>
+
+    <h3>Confucius (551–479 BCE, traditionally dated)</h3>
+    <p data-en="Confucius emphasized moral cultivation, respect, learning, social responsibility and proper relationships. His thought became highly influential in Chinese intellectual and ethical traditions."
+       data-sw="Confucius alisisitiza kujenga tabia njema, heshima, kujifunza, uwajibikaji wa kijamii na mahusiano yanayofaa. Mawazo yake yalikuwa na ushawishi mkubwa katika mila za kiakili na kimaadili za China.">
+       Confucius emphasized moral cultivation, respect, learning, social responsibility and proper relationships. His thought became highly influential in Chinese intellectual and ethical traditions.
+    </p>
+
+    <h3>Immanuel Kant (1724–1804)</h3>
+    <p data-en="Kant developed influential theories of knowledge and morality. His ethics emphasizes acting according to principles that can be consistently justified as duties."
+       data-sw="Kant alikuza nadharia zenye ushawishi kuhusu maarifa na maadili. Maadili yake yanasisitiza kutenda kwa kufuata kanuni zinazoweza kutetewa kwa uthabiti kama wajibu.">
+       Kant developed influential theories of knowledge and morality. His ethics emphasizes acting according to principles that can be consistently justified as duties.
+    </p>
+
+    <h3>Kwasi Wiredu (1931–2022)</h3>
+    <p data-en="Kwasi Wiredu was a major Ghanaian philosopher who examined African philosophical traditions, language and conceptual decolonization. His work encourages careful examination of inherited concepts and assumptions."
+       data-sw="Kwasi Wiredu alikuwa mwanafalsafa mashuhuri kutoka Ghana aliyechunguza mila za falsafa za Kiafrika, lugha na kuondoa utegemezi wa dhana zilizorithiwa kutoka ukoloni. Kazi yake inahimiza uchunguzi makini wa dhana na mawazo tuliyorithi.">
+       Kwasi Wiredu was a major Ghanaian philosopher who examined African philosophical traditions, language and conceptual decolonization. His work encourages careful examination of inherited concepts and assumptions.
+    </p>
+</section>
+
+<section id="everyday">
+    <h2 data-en="5. Philosophy in Everyday Life"
+        data-sw="5. Falsafa Katika Maisha ya Kila Siku">
+        5. Philosophy in Everyday Life
+    </h2>
+
+    <p data-en="Philosophy is not limited to classrooms or ancient books. It appears whenever we ask whether a decision is fair, whether evidence supports a claim, what makes a life meaningful or how power should be used responsibly."
+       data-sw="Falsafa haiko darasani au kwenye vitabu vya kale pekee. Huonekana tunapojiuliza kama uamuzi ni wa haki, kama ushahidi unaunga mkono dai, nini hufanya maisha yawe na maana au jinsi mamlaka yanavyopaswa kutumiwa kwa uwajibikaji.">
+       Philosophy is not limited to classrooms or ancient books. It appears whenever we ask whether a decision is fair, whether evidence supports a claim, what makes a life meaningful or how power should be used responsibly.
+    </p>
+
+    <div class="note"
+         data-en="Consider a school that rewards only examination marks. Is the system fair to learners who have shown improvement, creativity or exceptional effort? Philosophical analysis can help identify the values involved and compare possible solutions."
+         data-sw="Fikiria shule inayotambua alama za mitihani pekee. Je, mfumo huo ni wa haki kwa wanafunzi walioonyesha maendeleo, ubunifu au juhudi kubwa? Uchambuzi wa kifalsafa unaweza kusaidia kutambua maadili yanayohusika na kulinganisha suluhisho mbalimbali.">
+        Consider a school that rewards only examination marks. Is the system fair to learners who have shown improvement, creativity or exceptional effort? Philosophical analysis can help identify the values involved and compare possible solutions.
+    </div>
+</section>
+
+<section id="reflection">
+    <h2 data-en="6. Questions for Critical Reflection"
+        data-sw="6. Maswali ya Kutafakari kwa Kina">
+        6. Questions for Critical Reflection
+    </h2>
+
+    <ol>
+        <li data-en="What is the difference between knowledge, belief and opinion?"
+            data-sw="Kuna tofauti gani kati ya maarifa, imani na maoni?">
+            What is the difference between knowledge, belief and opinion?
+        </li>
+        <li data-en="Can a law be legal but morally unjust?"
+            data-sw="Je, sheria inaweza kuwa halali kisheria lakini isiwe ya haki kimaadili?">
+            Can a law be legal but morally unjust?
+        </li>
+        <li data-en="Should we accept a claim without examining its evidence?"
+            data-sw="Je, tunapaswa kukubali dai bila kuchunguza ushahidi wake?">
+            Should we accept a claim without examining its evidence?
+        </li>
+        <li data-en="How can we disagree respectfully while still questioning ideas?"
+            data-sw="Tunawezaje kutofautiana kwa heshima huku tukiendelea kuhoji mawazo?">
+            How can we disagree respectfully while still questioning ideas?
+        </li>
+        <li data-en="What responsibilities come with knowledge and power?"
+            data-sw="Ni majukumu gani yanayoambatana na maarifa na mamlaka?">
+            What responsibilities come with knowledge and power?
+        </li>
+    </ol>
+</section>
+
+<section id="references">
+    <h2 data-en="7. Suggested Reading"
+        data-sw="7. Vitabu vya Kusoma Zaidi">
+        7. Suggested Reading
+    </h2>
+
+    <ul>
+        <li>Plato, <em>Apology</em>.</li>
+        <li>Aristotle, <em>Nicomachean Ethics</em>.</li>
+        <li>Bertrand Russell, <em>The Problems of Philosophy</em>.</li>
+        <li>Kwasi Wiredu, <em>Philosophy and an African Culture</em>.</li>
+    </ul>
+
+    <p data-en="These works offer different approaches to philosophical inquiry. Read them critically and compare their arguments rather than treating any single author as the final authority."
+       data-sw="Vitabu hivi vinatoa mitazamo tofauti ya uchunguzi wa kifalsafa. Visome kwa uchambuzi na linganisha hoja zake badala ya kumchukulia mwandishi mmoja kuwa mamlaka ya mwisho.">
+       These works offer different approaches to philosophical inquiry. Read them critically and compare their arguments rather than treating any single author as the final authority.
+    </p>
+</section>
+
 </main>
 
 <footer>
-    <p>© 2026 Masaka Chacha Knowledge Hub</p>
+    <p>Masaka Chacha Knowledge Hub</p>
+    <p data-en="Learn independently. Think critically. Share knowledge."
+       data-sw="Jifunze kwa kujitegemea. Fikiri kwa kina. Shiriki maarifa.">
+       Learn independently. Think critically. Share knowledge.
+    </p>
 </footer>
 
 <script>
-    function changeLanguage(language) {
-        document.querySelectorAll("[data-en]").forEach(function(element) {
-            element.textContent = element.getAttribute("data-" + language);
-        });
-        document.documentElement.lang = language;
-    }
+function setLanguage(language) {
+    document.documentElement.lang = language;
+
+    document.querySelectorAll("[data-en][data-sw]").forEach(function(element) {
+        element.textContent = element.getAttribute("data-" + language);
+    });
+}
 </script>
 
 </body>
